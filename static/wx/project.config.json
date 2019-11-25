@@ -1,0 +1,15 @@
+{
+  "compileType": "miniprogram",
+  "setting": {
+    "newFeature": true,
+    "urlCheck": true,
+    "es6": false,
+    "postcss": true,
+    "minified": false,
+    "autoAudits": false
+  },
+  "appid": "wxb4ceceeac1919712",
+  "projectname": "answer",
+  "description": "The answer of everything",
+  "condition": {}
+}

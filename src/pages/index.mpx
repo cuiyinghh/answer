@@ -1,0 +1,61 @@
+<template>
+<view class="main">
+  <view class="page-1" bindtap="page1Click">
+    <view class="page1-center-wrap">
+      <view class="text1">你有问题吗</view>
+      <view class="text2">我有答案</view>
+    </view>
+  </view>
+  <view class="page-2">
+  
+  </view>
+<view>
+</template>
+
+<script>
+  import { createPage } from '@mpxjs/core'
+
+  createPage({
+    onLoad () {
+      console.log('=====onload')
+    },
+    methods: {
+      page1Click () {
+        console.log('aaa')
+      }
+    }
+  })
+</script>
+
+<style lang="stylus">
+.main
+  background url('./img/bg1.jpg')
+  width: 100vw;
+  height: 100vh;
+  background-size: cover
+  .page-1
+    width: 100vw;
+    height: 100vh;
+    display flex
+    justify-content center
+    align-items center
+    .page1-center-wrap
+      position relative
+      margin 0 auto
+      margin-top -20vh
+      background url('./img/content.png')
+      background-size: 100% 100%;
+      width: 76vw;
+      height: 101.33vw;
+      text-align center
+      .text1
+        padding-top 34vw
+        font-size 20px
+        color #fff
+        font-weight 100
+      .text2
+        color #fff
+        font-size 20px
+        padding-top 6vw
+        font-weight 100
+</style>
