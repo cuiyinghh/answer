@@ -1,7 +1,7 @@
 <template>
 <view class="main">
   <view class="page-1" bindtap="page1Click">
-    <view class="page1-center-wrap">
+    <view class="page1-center-wrap {{page1Class}}">
       <view class="text1">你有问题吗</view>
       <view class="text2">我有答案</view>
     </view>
@@ -13,15 +13,42 @@
 </template>
 
 <script>
+  /*
+   * status:
+   *  0: 页面1，首页
+   *  1: 页面2，指纹页
+   *  2: 页面3，答案页
+   *
+   */
   import { createPage } from '@mpxjs/core'
 
   createPage({
+    data: {
+      status: 0,
+      page1Class: ''
+    },
+    computed: {
+      // page1Class () {
+      //   return this.isShow === true
+      //     ? 'isShow'
+      //     : this.isShow === false
+      //       ? 'isHide'
+      //       : ''
+      // }
+    },
     onLoad () {
-      console.log('=====onload')
+    },
+    watch: {
+      // hours(newVal, oldVal) {
+      //   if (newVal === 2 && oldVal === 1) {
+      //     this.page1to2()
+      //   }
+      // }
     },
     methods: {
       page1Click () {
-        console.log('aaa')
+        this.status = 2
+        this.page1Class = 'page1-hide'
       }
     }
   })
@@ -58,4 +85,8 @@
         font-size 20px
         padding-top 6vw
         font-weight 100
+    .page1-hide
+      -webkit-transform rotateY(180deg)
+      -webkit-transform-style preserve-3d
+      -webkit-transition transform 1s
 </style>
