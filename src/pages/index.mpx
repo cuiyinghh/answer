@@ -18,7 +18,6 @@
    *  0: 页面1，首页
    *  1: 页面2，指纹页
    *  2: 页面3，答案页
-   *
    */
   import { createPage } from '@mpxjs/core'
 
