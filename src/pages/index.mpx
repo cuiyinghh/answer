@@ -3,7 +3,7 @@
   <view class="page-1" bindtap="page1Click">
     <view class="page1-center-wrap {{page1Class}}">
       <view class="text1">你有问题吗</view>
-      <view class="text2">我有答案</view>
+      <view class="text2">我有答案。</view>
     </view>
   </view>
   <view class="page-2">
